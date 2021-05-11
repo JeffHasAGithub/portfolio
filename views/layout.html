@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jeff</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="has-navbar-fixed-top">
+  {% block navbar %}
+    <nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://bulma.io">
+            <img src="https://bulma.io/images/bulma-logo.png" width=112" height="28">
+          </a>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+            data-target="navi">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navi" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="/resume">
+              Resume
+            </a>
+            <a class="navbar-item" href="/projects">
+              Projects
+            </a>
+            <a class="navbar-item" href="https:/github.com/JeffHasAGithub">
+              Github
+            </a>
+          </div>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <a class="button is-primary" href="/login">
+                Login
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  {% endblock %}
+    <main class="section has-background-primary-light">
+      {% block content %}
+      {% endblock %}
+    </main>
+</body>
+</html>
