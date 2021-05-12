@@ -25,6 +25,10 @@ app.get('/', (req, res) => {
   res.render('home.html');
 });
 
+app.get('/resume', (req, res) => {
+  res.render('resume.html');
+})
+
 const project = require('./controllers/project');
 app.get('/projects', (req, res) => {
   const projects = project.findAll();
