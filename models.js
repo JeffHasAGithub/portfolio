@@ -1,13 +1,5 @@
 const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize(
-  process.env.DB_NAME,
-  process.env.DB_USER,
-  process.env.DB_PASS,
-  {
-    host: process.env.HOST,
-    dialect: 'mysql',
-  }
-);
+const sequelize = new Sequelize('mysql://b7f50f9ef0bcb0:1e6886f1@us-cdbr-east-03.cleardb.com/heroku_08df9e65f98d751?reconnect=true');
 
 sequelize.sync();
 
