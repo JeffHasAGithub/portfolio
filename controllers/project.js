@@ -6,7 +6,7 @@ exports.create = async (project) => {
 }
 
 exports.findAll = async (opts) => {
-  return await Project.findAll({ where: opts });
+  return await Project.findAll(opts);
 }
 
 exports.findByPk = async (id) => {
