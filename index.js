@@ -34,6 +34,8 @@ app.get('/projects', (req, res) => {
   const projects = project.findAll();
   projects.then(result => {
     res.render('projects.html', { projects: result });
+  }).catch(() => {
+    res.render('404.html');
   });
 });
 
@@ -43,6 +45,15 @@ app.get('/login', (req, res) => {
 
 app.post('/login', (req, res) => {
   res.redirect('/');
+});
+
+app.get('/admin', (req, res) => {
+  const projects = project.findAll();
+  projects.then(result => {
+    res.render('admin.html', { projects: result });
+  }).catch(() => {
+    res.render('404.html');
+  });
 });
 
 server.listen(process.env.PORT || 3000, () => {
