@@ -1,5 +1,5 @@
 const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('mysql://b7f50f9ef0bcb0:1e6886f1@us-cdbr-east-03.cleardb.com/heroku_08df9e65f98d751?reconnect=true');
+const sequelize = new Sequelize(process.env.DB_STRING);
 
 sequelize.sync();
 
