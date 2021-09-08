@@ -1,5 +1,4 @@
 require('dotenv').config();
-console.log(process.env.CLEARDB_DATABASE_URL);
 const express = require('express');
 const session = require('express-session');
 const http = require('http');
